@@ -1,0 +1,26 @@
+
+#BTNS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.About {
+    float: left;
+    text-align: justify;
+}
+
+.pre {
+    display: block;
+    margin-top: 200px;
+}
+
+#pre1 {
+    margin-right: 350px;
+}
+
+#pre2 {
+    text-align: justify;
+    /* margin-left: 300px; */
+}
