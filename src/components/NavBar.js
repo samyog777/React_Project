@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function NavBar(props) {
+    const ChangeBack = () => {
+        let Color = document.querySelector("#UserColor").value;
+        console.log(Color);
+        let place = document.querySelector(".myclass");
+        place.style.backgroundColor = Color;
+    }
     return (
         <nav className={`navbar navbar-expand-lg navbar-${props.Mode} bg-${props.Mode}`}>
             <div className="container-fluid">
@@ -63,6 +69,9 @@ export default function NavBar(props) {
                                 </li>
                             </ul>
                         </li>
+                        <p style={{ color: "blue" }} className=" ms-5 my-2">Choose The color</p>
+                        <input type="color" className="mx-1 my-2" id="UserColor" />
+                        <button className="mx-1 my-1 btn btn-info" onClick={ChangeBack}>Select</button>
                     </ul>
                     <div className="form-check form-switch">
                         <input className={`form-check-input`} onClick={props.Switch} type="checkbox" role="switch" id="flexSwitchCheckChecked" />
@@ -81,6 +90,7 @@ export default function NavBar(props) {
                     </form>
                 </div>
             </div>
+            <h1 id="Main">Almost</h1>
         </nav>
     );
 }

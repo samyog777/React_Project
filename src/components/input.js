@@ -35,7 +35,7 @@ export default function Input(props) {
         console.log("White button Clicked");
         let newColor = "white";
         setColor(newColor);
-        props.ShowAlert("info", ": Text Color Changed to WHite");
+        props.ShowAlert("info", ": Text Color Changed to White");
     }
     const HandelCopy = () => {
         let text = document.querySelector("#Text");
