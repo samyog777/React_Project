@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Input(props) {
     const onClickUpButton = () => {
@@ -101,6 +101,16 @@ export default function Input(props) {
     const [Color, setColor] = useState("black");
     // setText("HEllo");
     // setText("NewText");
+
+    const [Ntext, setNtext] = useState(0);
+    useEffect(() => {
+        if (text.length > 0) {
+            let number_text = text.split(" ").length;
+            setNtext(number_text);
+        } else {
+            setNtext(0);
+        };
+    }, [text]);
     return (
         <div id="INPUT" style={Mode} className="my-5">
             <div className="mb-3">
@@ -146,7 +156,7 @@ export default function Input(props) {
             <div className="About my-3">
                 <h1>About Your Text</h1>
                 <p>
-                    --{text.split(" ").length} words and {text.length} characters
+                    --{Ntext} words and {text.length} characters
                 </p>
                 <p>
                     --The average time to read this will be:{" "}

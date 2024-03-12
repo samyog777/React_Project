@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import "./App.css";
 // import { Greet } from './components/greet';
+// import Greet from './components/greet';
 // import Wellcome from './components/wellcome';
 // import Hello from "./components/hello";
 import NavBar from './components/NavBar';
@@ -32,6 +33,7 @@ function App() {
       input_field.style.backgroundColor = "#31363F"
       input_field.style.color = "white";
       ShowAlert("success", ": Dark Mode has been enables");
+      document.title = "Dark"
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
@@ -41,10 +43,12 @@ function App() {
       input_field.style.backgroundColor = "#F9EFDB"
       input_field.style.color = "black";
       ShowAlert("success", ": Light Mode has been enables");
+      document.title = "white";
     }
   }
+
   return (
-    <div className="App" >
+    <div div className="App" >
       <NavBar title="Sam" Mode={Mode} Switch={Switch} />
       <div className="container">
         <Input ShowAlert={ShowAlert} mode={Mode} />
